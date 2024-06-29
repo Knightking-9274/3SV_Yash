@@ -44,8 +44,8 @@ public class OrderController {
         List<Order> orders = orderService.usersOrderHistory(user.getId());
         return new ResponseEntity<>(orders,HttpStatus.CREATED);
     }
-    @GetMapping("/{id}")
-    public ResponseEntity<Order>findOrderByid(@PathVariable("id")Long orderId,
+    @GetMapping("/{Id}")
+    public ResponseEntity<Order>findOrderByid(@PathVariable("Id")Long orderId,
                     @RequestHeader("Authorization")String jwt)throws UserException, OrderException{
         // User user = userService.UserProfileByJwt(jwt);
         Order order = orderService.findOrderById(orderId);

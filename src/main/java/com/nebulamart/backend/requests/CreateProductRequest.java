@@ -10,7 +10,7 @@ public class CreateProductRequest {
     private int price;
     private int discountedPrice;
     private int discountPercent;
-    private int Quantity;
+    private int quantity;
     private String brand;
     private String color;
     private Set<Size> size = new HashSet<>();  
@@ -50,10 +50,10 @@ public class CreateProductRequest {
         this.discountPercent = discountPercent;
     }
     public int getQuantity() {
-        return Quantity;
+        return quantity;
     }
     public void setQuantity(int quantity) {
-        Quantity = quantity;
+        this.quantity = quantity;
     }
     public String getBrand() {
         return brand;
@@ -97,8 +97,4 @@ public class CreateProductRequest {
     public void setThirdLevelCategory(String thirdLevelCategory) {
         this.thirdLevelCategory = thirdLevelCategory;
     }
-
-
-    
-
 }

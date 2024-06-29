@@ -8,6 +8,6 @@ import java.util.List;
 import com.nebulamart.backend.entities.Order;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
-    @Query("select o from Order o where o.user.id = :userId and(o.orderStatus=placed or o.orderStatus=confirmed or o.orderStatus=shipped or o.orderStatus=delivered)")
+    @Query("select o from Order o where o.user.id =:userId and(o.orderStatus='PLACED' or o.orderStatus='CONFIRMED' or o.orderStatus='SHIPPED' or o.orderStatus='DELIVERED')")
     public List<Order>getUsersOrders(@Param("userId")Long userId);
 }
