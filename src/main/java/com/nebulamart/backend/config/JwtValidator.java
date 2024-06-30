@@ -29,7 +29,7 @@ public class JwtValidator extends OncePerRequestFilter {
   
         String jwt = request.getHeader(JwtConstants.JWT_HEADER);
         if(jwt!= null){
-            //Bearere 
+            //Bearere  token of intial 7 digits
             jwt = jwt.substring(7);
             try{
                SecretKey key = Keys.hmacShaKeyFor(JwtConstants.SECRET_KEY.getBytes());
